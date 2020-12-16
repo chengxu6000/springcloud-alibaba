@@ -12,6 +12,8 @@
         <module>shop-common</module>
         <module>shop-user</module>
         <module>shop_product</module>
+        <module>shop-order</module>
+        <module>shop-order</module>
     </modules>
     <!--父工程-->
     <parent>
