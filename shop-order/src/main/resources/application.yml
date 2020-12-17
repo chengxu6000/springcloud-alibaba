@@ -2,7 +2,7 @@ server:
   port: 8091
 spring:
   application:
-    name: service-user
+    name: service-order
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql:///shop?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true
@@ -14,3 +14,10 @@ spring:
         hbm2ddl:
           auto: update
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  service-product: # 调用的提供者的名称
+    ribbon:
+      NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
